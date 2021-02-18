@@ -189,13 +189,15 @@
             font-weight: 400;
         }
     }
-
+    main{
+        max-width: 1440px;
+    }
     .restaurant{
         display: flex;
         flex-direction: column;
         padding: 1.5rem;
         background-color: #f7f7f7;
-
+  
         article{
             border-radius: $border;
             box-shadow: $shade2;
@@ -228,13 +230,10 @@
             border-radius: $bordertop;
         }
 
-        figcaption, h3, p {
+        h3, p {
             margin: 10px;
-            
-            h3{
-                display: flex;
-                justify-content: space-between;
-            }
+            justify-content: space-between;
+            display: flex;
         }
 
         i{

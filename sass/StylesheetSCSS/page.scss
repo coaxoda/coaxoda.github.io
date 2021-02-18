@@ -55,12 +55,13 @@
     }
     /*** STRING CONTENT OF MENU ***/
     .mainContent{
-        width: 100%;
+        width: 70%;
         background-color: #f2f2f2;
         border-radius: 2rem;
+        margin-left: auto;
+        margin-right: auto;
         position: relative;
         top: -55px;
-        background-color: #f2f2f2;
 
         h1{
             display: inline-flex;
@@ -183,9 +184,9 @@
         margin: auto;
         transition: all 0.2s ease-in;
 
-        p{
+        span{
             width: 100%;
-            line-height: 20px;
+            line-height: 50px;
             font-size: medium;
             color: white;
         }
