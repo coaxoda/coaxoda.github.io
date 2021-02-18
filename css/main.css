@@ -234,15 +234,15 @@ body {
       font-family: Shrikhand; }
     body .loader .loaderLine {
       position: absolute;
-      top: 430px; }
+      top: 57%; }
     body .loader .line {
       animation: loader 1s infinite;
-      border-radius: 3rem;
+      border-radius: 2rem;
       display: inline-block;
       transform-origin: center center;
       margin: 0 2rem;
-      width: 10px;
-      height: 10px; }
+      width: 12px;
+      height: 12px; }
     body .loader .line:nth-child(1) {
       background: #9356DC; }
     body .loader .line:nth-child(2) {
