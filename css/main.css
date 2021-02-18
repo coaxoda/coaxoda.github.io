@@ -34,12 +34,12 @@
     transform: translateX(70px); }
   to {
     transform: translateX(0px);
-    width: 90px; } }
+    width: 100px; } }
 /*** ANIMATION WHEN UN:HOVER On ARTICLE OF MENU ***/
 @keyframes slideout {
   from {
     transform: translateX(0px);
-    width: 90px; }
+    width: 100px; }
   to {
     transform: translateX(70px); } }
 /*** ICON VALIDATOR ANIMATION ***/
@@ -60,7 +60,7 @@
     opacity: 0; }
   50% {
     opacity: 0.5;
-    transform: scale(1.1); }
+    transform: scale(1.05); }
   75% {
     opacity: 0.6;
     transform: scale(0.99); }
@@ -93,14 +93,120 @@
   90% {
     transform: scale(1); }
   95% {
-    transform: scale(1.5);
-    opacity: 1;
+    transform: scale(1.8);
     margin-top: 0; }
   99% {
-    transform: scale(1.5); }
+    transform: scale(1);
+    opacity: 1;
+    z-index: 100; }
   100% {
-    opacity: 0;
     margin-top: 300%; } }
+/*** DESKTOP MEDIA ***/
+@media screen and (min-width: 768px) {
+  main {
+    margin-left: auto;
+    margin-right: auto; }
+
+  .menuExplorer button {
+    width: 20% !important; }
+
+  .functionContainer {
+    /** HOW TO SETTINGS **/ }
+    .functionContainer h2 {
+      display: flex;
+      justify-content: center; }
+
+  .functionList {
+    /** HOW TO SETTINGS **/
+    width: 100%;
+    flex-direction: unset !important;
+    justify-content: center; }
+    .functionList p {
+      width: 30%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 1rem 1rem !important; }
+      .functionList p span {
+        margin: 0px 5px 0px -12.5px;
+        overflow: hidden; }
+      .functionList p i {
+        padding: 0rem 1% 0rem 0rem !important; }
+
+  /** RESTAURANT SELECTION SETTINGS **/
+  .restaurant {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 1rem; }
+    .restaurant .restaurantItems {
+      /** RESTAURANT ITEMS SETTINGS **/
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .restaurant h2 {
+      display: flex;
+      bottom: 405px; }
+    .restaurant article {
+      /** ARTICLE RESTAURANT SETTINGS (! FOR DESK ONLY )**/
+      margin: 1rem !important;
+      margin: 1rem;
+      height: 270px;
+      width: 45%;
+      position: relative;
+      transition: all 0.2s ease-in;
+      animation: menu 3s ease-in; }
+      .restaurant article .new1, .restaurant article .new2 {
+        /** <= NEW RESTAURANT CAPTION FOR MOBILE **/
+        display: none; }
+      .restaurant article .newDesk, .restaurant article .newDesk2 {
+        /** <= NEW RESTAURANT CAPTION FOR DESKTOP **/
+        width: 100%;
+        position: absolute;
+        height: 30px;
+        bottom: 80px;
+        background-color: #99E2D0; }
+        .restaurant article .newDesk h4, .restaurant article .newDesk2 h4 {
+          color: #2a976a;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          line-height: 30px; }
+      .restaurant article:hover {
+        transform: scale(1.01);
+        box-shadow: 0px 15px 10px #dadada; }
+
+  /** MENU SELECTION SETTINGS **/
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 !important; }
+    .menu .menuTitle {
+      position: relative; }
+      .menu .menuTitle h3 {
+        top: -30px;
+        left: 20px;
+        position: absolute; }
+    .menu .entryMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+    .menu .mainMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+    .menu .endMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+
+  .checkout {
+    width: 15% !important; } }
+/** NEW RESTAURANT CAPTION SETTINGS (Default : display:none; for Desk or max width 768px) **/
+/** TABLET/ MOBILE FORMAT **/
+@media screen and (max-width: 768px) {
+  .newDesk, .newDesk2 {
+    display: none; } }
 /******* @import "reset.scss"; ***********/
 body {
   margin: 0;
@@ -201,7 +307,9 @@ header {
     cursor: pointer;
     transition: all, 0.2s ease-in; }
     .menuExplorer button:hover {
-      box-shadow: 0px 15px 10px #dadada; }
+      box-shadow: 0px 15px 10px #dadada;
+      background: #fd8dde;
+      background: linear-gradient(180deg, #fd8bdd 20%, #a86af5 90%); }
 
 .functionContainer {
   padding: 0.5rem; }
@@ -246,7 +354,8 @@ header {
   .restaurant article {
     border-radius: 1rem;
     box-shadow: 0px 5px 10px #dadada;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    height: 270px; }
     .restaurant article .new1, .restaurant article .new2 {
       position: absolute;
       width: 80px;
@@ -298,6 +407,11 @@ footer {
     margin-top: 0; }
   footer p {
     margin: 10px;
+    color: white;
+    cursor: pointer; }
+    footer p:hover {
+      text-decoration: underline 1px white; }
+  footer a {
     color: white; }
   footer i {
     padding: 0px 15px 5px 0px;

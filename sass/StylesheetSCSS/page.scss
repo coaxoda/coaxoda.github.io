@@ -1,6 +1,7 @@
 @import "__vars.scss";
 @import "__keyframes.scss";
 @import "__functions.scss";
+@import "__media.scss";
 
 /****** BODY SECTION *****/
     body{
@@ -28,7 +29,7 @@
             font-family: Shrikhand;
             font-weight: 200;
             justify-content: space-between;
-            width: 75%;
+            width: 55%;
             margin: 0;
 
             i{
@@ -37,6 +38,7 @@
                 font-size: x-large;
                 padding: 10px;
                 z-index: 10;
+
             }
         }
     }
@@ -53,7 +55,6 @@
     }
     /*** STRING CONTENT OF MENU ***/
     .mainContent{
-
         width: 100%;
         background-color: #f2f2f2;
         border-radius: 2rem;
@@ -86,7 +87,7 @@
     .menu{
         padding: 0rem 2rem 2rem 2rem;
         h3{
-            width: 12%;
+            width: 35px;
             font-size: medium;
             font-weight: 300;
             border-bottom: #99E2D0 3px solid;
@@ -173,19 +174,26 @@
         height: 50px;
         background: rgb(255,121,218);
         background: linear-gradient(175deg,rgb(255, 121, 218) 19%, rgb(147, 86, 220) 100%);
-        box-shadow: $shade;
+        box-shadow: $shade2;
         width: 50%;
         border-radius: 2rem;
         border: none;
         outline: none;
         cursor: pointer;
         margin: auto;
+        transition: all 0.2s ease-in;
 
         p{
             width: 100%;
             line-height: 20px;
             font-size: medium;
             color: white;
+        }
+
+        &:hover{
+            box-shadow: $shadeMov;
+            background: rgb(253, 141, 222);
+            background: linear-gradient(180deg, rgb(253, 139, 221) 20%, rgb(168, 106, 245) 90%);
         }
     }
     /*** FOOTER SECTION ***/

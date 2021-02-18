@@ -60,7 +60,7 @@
     opacity: 0; }
   50% {
     opacity: 0.5;
-    transform: scale(1.1); }
+    transform: scale(1.05); }
   75% {
     opacity: 0.6;
     transform: scale(0.99); }
@@ -93,13 +93,13 @@
   90% {
     transform: scale(1); }
   95% {
-    transform: scale(1.5);
-    opacity: 1;
+    transform: scale(1.8);
     margin-top: 0; }
   99% {
-    transform: scale(1.5); }
+    transform: scale(1);
+    opacity: 1;
+    z-index: 100; }
   100% {
-    opacity: 0;
     margin-top: 300%; } }
 .entryMenu .menuOne {
   animation: menu 1.2s; }
@@ -128,6 +128,112 @@
 .endMenu .menuFour {
   animation: menu 3.8s; }
 
+/*** DESKTOP MEDIA ***/
+@media screen and (min-width: 768px) {
+  main {
+    margin-left: auto;
+    margin-right: auto; }
+
+  .menuExplorer button {
+    width: 20% !important; }
+
+  .functionContainer {
+    /** HOW TO SETTINGS **/ }
+    .functionContainer h2 {
+      display: flex;
+      justify-content: center; }
+
+  .functionList {
+    /** HOW TO SETTINGS **/
+    width: 100%;
+    flex-direction: unset !important;
+    justify-content: center; }
+    .functionList p {
+      width: 30%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin: 1rem 1rem !important; }
+      .functionList p span {
+        margin: 0px 5px 0px -12.5px;
+        overflow: hidden; }
+      .functionList p i {
+        padding: 0rem 1% 0rem 0rem !important; }
+
+  /** RESTAURANT SELECTION SETTINGS **/
+  .restaurant {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 1rem; }
+    .restaurant .restaurantItems {
+      /** RESTAURANT ITEMS SETTINGS **/
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center; }
+    .restaurant h2 {
+      display: flex;
+      bottom: 405px; }
+    .restaurant article {
+      /** ARTICLE RESTAURANT SETTINGS (! FOR DESK ONLY )**/
+      margin: 1rem !important;
+      margin: 1rem;
+      height: 270px;
+      width: 45%;
+      position: relative;
+      transition: all 0.2s ease-in;
+      animation: menu 3s ease-in; }
+      .restaurant article .new1, .restaurant article .new2 {
+        /** <= NEW RESTAURANT CAPTION FOR MOBILE **/
+        display: none; }
+      .restaurant article .newDesk, .restaurant article .newDesk2 {
+        /** <= NEW RESTAURANT CAPTION FOR DESKTOP **/
+        width: 100%;
+        position: absolute;
+        height: 30px;
+        bottom: 80px;
+        background-color: #99E2D0; }
+        .restaurant article .newDesk h4, .restaurant article .newDesk2 h4 {
+          color: #2a976a;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          line-height: 30px; }
+      .restaurant article:hover {
+        transform: scale(1.01);
+        box-shadow: 0px 15px 10px #dadada; }
+
+  /** MENU SELECTION SETTINGS **/
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 !important; }
+    .menu .menuTitle {
+      position: relative; }
+      .menu .menuTitle h3 {
+        top: -30px;
+        left: 20px;
+        position: absolute; }
+    .menu .entryMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+    .menu .mainMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+    .menu .endMenu {
+      display: block;
+      width: 30%;
+      margin: 1rem; }
+
+  .checkout {
+    width: 15% !important; } }
+/** NEW RESTAURANT CAPTION SETTINGS (Default : display:none; for Desk or max width 768px) **/
+/** TABLET/ MOBILE FORMAT **/
+@media screen and (max-width: 768px) {
+  .newDesk, .newDesk2 {
+    display: none; } }
 /****** BODY SECTION *****/
 body {
   margin: 0;
@@ -149,7 +255,7 @@ header {
     font-family: Shrikhand;
     font-weight: 200;
     justify-content: space-between;
-    width: 75%;
+    width: 55%;
     margin: 0; }
     header h1 i {
       width: 50px;
@@ -195,7 +301,7 @@ main {
   padding: 0rem 2rem 2rem 2rem;
   /*** ARTICLE OF MENU SELECTOR ***/ }
   .menu h3 {
-    width: 12%;
+    width: 35px;
     font-size: medium;
     font-weight: 300;
     border-bottom: #99E2D0 3px solid;
@@ -265,18 +371,23 @@ article:hover .checkin i::before {
   height: 50px;
   background: #ff79da;
   background: linear-gradient(175deg, #ff79da 19%, #9356dc 100%);
-  box-shadow: 0px 10px 15px #b4b4b4;
+  box-shadow: 0px 5px 10px #dadada;
   width: 50%;
   border-radius: 2rem;
   border: none;
   outline: none;
   cursor: pointer;
-  margin: auto; }
+  margin: auto;
+  transition: all 0.2s ease-in; }
   .checkout p {
     width: 100%;
     line-height: 20px;
     font-size: medium;
     color: white; }
+  .checkout:hover {
+    box-shadow: 0px 15px 10px #dadada;
+    background: #fd8dde;
+    background: linear-gradient(180deg, #fd8bdd 20%, #a86af5 90%); }
 
 /*** FOOTER SECTION ***/
 footer {

@@ -1,5 +1,6 @@
 @import "__vars.scss";
 @import "__keyframes.scss";
+@import "__media.scss";
 
 /******* @import "reset.scss"; ***********/
 
@@ -65,7 +66,6 @@
             }
         }   
     }
-    
 
     header{
         display: flex;
@@ -137,6 +137,8 @@
 
             &:hover{
                 box-shadow: $shadeMov;
+                background: rgb(253, 141, 222);
+                background: linear-gradient(180deg, rgb(253, 139, 221) 20%, rgb(168, 106, 245) 90%);
             }
         }
     }
@@ -198,7 +200,7 @@
             border-radius: $border;
             box-shadow: $shade2;
             margin-bottom: 1rem;
-
+            height: 270px;
             .new1, .new2{
                 position: absolute;
                 width: 80px;
@@ -269,8 +271,15 @@
         p{
             margin: 10px;
             color: white;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline 1px white;
+            }
+            
         }
-        
+        a{
+            color: white;
+        }
         i{
             padding: 0px 15px 5px 0px;
             width: 1rem;
