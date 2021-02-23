@@ -176,6 +176,15 @@
         box-shadow: 0px 15px 10px #dadada; }
 
   /** MENU SELECTION SETTINGS **/
+  .mainContent {
+    width: 70% !important;
+    background-color: #f2f2f2;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -55px; }
+
   .menu {
     display: flex;
     justify-content: space-evenly;
@@ -230,7 +239,7 @@ body {
       align-items: center; }
     body .loader h1 {
       color: #383838;
-      font-size: xxx-large;
+      font-size: 300%;
       font-family: Shrikhand; }
     body .loader .loaderLine {
       position: absolute;
@@ -409,10 +418,10 @@ footer {
     margin-top: 0; }
   footer p {
     margin: 10px;
-    color: white;
+    color: white !important;
     cursor: pointer; }
     footer p:hover {
-      text-decoration: underline 1px white; }
+      text-decoration: underline white; }
   footer a {
     color: white; }
   footer i {

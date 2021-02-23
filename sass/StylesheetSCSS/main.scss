@@ -32,7 +32,7 @@
 
             h1{
                     color: rgb(56, 56, 56);
-                    font-size: xxx-large;
+                    font-size: 300%;
                     font-family: Shrikhand;
             }
                 
@@ -269,10 +269,10 @@
 
         p{
             margin: 10px;
-            color: white;
+            color: white !important;
             cursor: pointer;
             &:hover{
-                text-decoration: underline 1px white;
+                text-decoration: underline white;
             }
             
         }
