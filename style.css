@@ -21,8 +21,9 @@ input{
     display: flex;
     padding: 10px;
     border: 1px white;
-    background: none;
-    border-bottom: 2px solid #f3976c;
+    background: rgba(255, 255, 255, 0.048);
+    border: 2px solid #f3976c44;
+    transition: all 0.2s ease;
 }
 
 input:focus{
@@ -669,6 +670,7 @@ a[data-lightbox]:hover img {
 #lightbox-modal {
     display: flex;
     align-items: center;
+    
 }
 
 #lightbox-modal .modal-dialog {
@@ -771,7 +773,8 @@ a {
 }
 
 .info{
-    color: white !important
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.425) !important;
 }
 
 .voffset{
@@ -889,7 +892,23 @@ h4 {
 }
 
 .message{
-    height: 80px;
+    height: 150px;
+}
+
+textarea{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.048);
+    transition: all 0.2s ease;
+    border: 2px solid #f3976c44;
+}
+
+textarea:focus{
+    background-color: #c0c0c0;
+    font-weight: 600;
+}
+
+textarea:focus::placeholder{
+    color: #141414;
 }
 
 .avatar {
