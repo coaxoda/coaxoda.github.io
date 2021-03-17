@@ -161,7 +161,8 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(0, 0, 0, 0.747);
+    font-weight: 600;
 }
 
 .d-bloc .a-btn:hover,
@@ -178,7 +179,9 @@ a:hover {
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease;
+    transform: scale(1.1);
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -831,6 +834,7 @@ p {
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+    
 }
 
 h2 {
