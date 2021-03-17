@@ -718,8 +718,8 @@ a[data-lightbox]:hover img {
 .next-lightbox,
 .prev-lightbox {
     font-size: 20px;
-    color: rgba(255, 255, 255, .9);
-    background: rgba(0, 0, 0, .5);
+    color: rgb(255 255 255) !important;;
+    background: rgb(0 0 0 / 94%);;
     transition: all .2s ease-in-out;
     position: absolute;
     top: 45%;
@@ -811,11 +811,6 @@ p {
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
-}
-
-.tight-width-whitespace img{
-    background-size: cover;
-    max-block-size: 120px;
 }
 
 .h1 {
