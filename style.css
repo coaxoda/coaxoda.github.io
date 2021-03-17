@@ -339,13 +339,9 @@ a:hover {
 .navbar-brand img {
     margin: 0 5px 0 0;
     display: inline;
-    height: 80px;
-    background-size: cover;
+    background-size: contain;
 }
 
-.navbar-brand img[src$=svg] {
-    min-width: 100px;
-}
 
 .nav-center .navbar-brand img {
     margin: 0;
@@ -817,6 +813,11 @@ p {
     margin: auto auto auto auto;
 }
 
+.tight-width-whitespace img{
+    background-size: cover;
+    max-block-size: 120px;
+}
+
 .h1 {
     font-size: 20px;
     font-family: "Open Sans";
@@ -1194,7 +1195,6 @@ textarea:focus::placeholder{
         margin-top: 20px;
     }
     .voffset-lg {
-        margin-top: 30px;
         margin-top: 30px;
         width: 80%;
         margin-left: auto;
