@@ -10,36 +10,7 @@ body {
 a,
 button {
     transition: all .3s ease-in-out;
-}
-
-button:focus{
-    background: #aa6a4d !important;
-}
-
-input{
-    width: 100%;
-    display: flex;
-    padding: 10px;
-    border: 1px white;
-    background: rgba(255, 255, 255, 0.048);
-    
-    border: 2px solid #f3976c44;
-    transition: all 0.2s ease;
-}
-
-input:focus{
-    background-color: #c0c0c0;
-    color: #141414;
-    font-weight: 600;
-}
-
-::placeholder{
-    color:#f3976c96;
-    font-weight: 600;
-}
-
-input:focus::placeholder{
-    color: rgb(46, 46, 46);
+    outline: none!important;
 }
 
 a:hover {
@@ -47,7 +18,7 @@ a:hover {
     cursor: pointer;
 }
 
-#page-loading-blocs-notifaction{
+#page-loading-blocs-notifaction {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -162,8 +133,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(0, 0, 0, 0.747);
-    font-weight: 600;
+    color: rgba(255, 255, 255, .6);
 }
 
 .d-bloc .a-btn:hover,
@@ -180,9 +150,7 @@ a:hover {
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: rgb(0, 0, 0);
-    transition: all 0.2s ease;
-    transform: scale(1.1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -317,15 +285,11 @@ a:hover {
 
 #bloc-1-hero h1 {
     font-size: 32px;
-    color: #fcc4aa !important;
-    text-shadow: 0px 0px 10px rgb(32, 32, 32);
 }
 
 .navbar {
     margin-bottom: 0;
     z-index: 1;
-    justify-content: center;
-    display: flex;
 }
 
 .navbar-brand {
@@ -338,11 +302,14 @@ a:hover {
 }
 
 .navbar-brand img {
+    max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
-    background-size: contain;
 }
 
+.navbar-brand img[src$=svg] {
+    min-width: 100px;
+}
 
 .nav-center .navbar-brand img {
     margin: 0;
@@ -471,8 +438,6 @@ nav .caret {
 .mg-md {
     margin-top: 10px;
     margin-bottom: 20px;
-    font-size: 22px !important;
-    font-weight: 600 !important;
 }
 
 .mg-lg {
@@ -482,17 +447,6 @@ nav .caret {
 
 .btn {
     margin: 0 5px 5px 0;
-}
-
-.btnSend, button{
-    background-color: #F3976C;
-    border: none;
-    font-weight: 400;
-    font-size: 19px;
-}
-
-button:hover{
-    background-color: #c47b59;
 }
 
 .btn.pull-right {
@@ -556,63 +510,6 @@ button {
     box-shadow: none;
 }
 
-#contact{
-    display: flex;
-    background-color: transparent !important;
-}
-
-.form{
-    width: 100%;
-    margin: 0;
-    padding: 1rem;
-}
-
-.formItems{
-    color: black;
-    margin: 0;
-    padding: 0rem 2rem;
-    margin: 10px;
-}
-
-.formItems label{
-    display: flex;
-    color: white !important;
-    padding: 0;
-    font-weight: 600;
-}
-
-.selector{
-    width: 100%;
-    height: 40px;
-}
-
-.container-bot{
-    background-color: rgba(61, 61, 61, 0.555) !important;
-    width: 100%;
-    padding: 0 !important;
-}
-
-.container-bot h2{
-    background-color: rgba(0, 0, 0, 0.425);
-    font-size: 19px !important;
-    color: rgb(255, 255, 255) !important;
-    font-weight: 600;
-}
-
-.sendBtn > button{
-    width: 150px;
-    background-color: #F3976C;
-    height: 45px;
-    margin: 2rem;
-    color: #FFFFFF;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 3rem;
-    text-transform: uppercase;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-    text-shadow:  0px 0px 3px rgba(0, 0, 0, 0.425);
-}
-
 .scrollToTop {
     width: 40px;
     height: 40px;
@@ -637,10 +534,6 @@ a[data-lightbox] {
     position: relative;
     display: block;
     text-align: center;
-    margin: auto auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 a[data-lightbox]:hover::before {
@@ -649,14 +542,14 @@ a[data-lightbox]:hover::before {
     font-size: 32px;
     width: 50px;
     height: 50px;
-    padding: 0.2rem;
+    margin-left: -25px;
     border-radius: 50%;
     background: rgba(0, 0, 0, .6);
     color: #FFF;
     font-weight: 100;
     z-index: 1;
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
@@ -670,14 +563,12 @@ a[data-lightbox]:hover img {
 #lightbox-modal {
     display: flex;
     align-items: center;
-    
 }
 
 #lightbox-modal .modal-dialog {
-    width: auto;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 0;
 }
 
 #lightbox-modal .modal-dialog img {
@@ -719,8 +610,8 @@ a[data-lightbox]:hover img {
 .next-lightbox,
 .prev-lightbox {
     font-size: 20px;
-    color: rgb(255 255 255) !important;;
-    background: rgb(0 0 0 / 94%);;
+    color: rgba(255, 255, 255, .9);
+    background: rgba(0, 0, 0, .5);
     transition: all .2s ease-in-out;
     position: absolute;
     top: 45%;
@@ -746,14 +637,9 @@ a[data-lightbox]:hover img {
     padding: 0;
     color: rgba(0, 0, 0, .5);
     background: none;
-    display: flex;
-    justify-content: center;
 }
-.main{
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+h1,
 h2,
 h3,
 h4,
@@ -765,28 +651,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    font-style: initial;
-    font-size: 15px !important;
-    padding: 1rem;
     color: #575757!important;
-    margin: 0;
-}
-
-.blockquote{
-    font-style: italic;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.info{
-    color: white !important;
-    background-color: rgba(0, 0, 0, 0.425) !important;
-}
-
-.voffset{
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }
 
 .container {
@@ -835,12 +700,8 @@ p {
 }
 
 .social {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 400px;
+    margin: auto auto auto auto;
 }
 
 h2 {
@@ -863,12 +724,6 @@ h3 {
 
 h1 {
     color: #333333!important;
-    font-size: 22px;
-}
-
-.citation{
-    font-style: italic;
-    margin: 0;
 }
 
 h4 {
@@ -881,12 +736,7 @@ h4 {
 }
 
 .white {
-    color: #ffffff!important;
-    font-weight: bold;
-}
-
-.white-footer{
-    color: #000000 !important;
+    color: #FFFFFF!important;
 }
 
 .portfolio-thumb {
@@ -898,43 +748,12 @@ h4 {
     margin-top: 50px;
 }
 
-#contact{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(255, 255, 255, 0.377);
-}
-
-.message{
-    height: 150px;
-}
-
-textarea{
-    width: 100%;
-    height: 150px;
-    padding: 10px 1rem;
-    box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.048);
-    transition: all 0.2s ease;
-    border: 2px solid #f3976c44;
-    resize: none;
-}
-
-textarea:focus{
-    background-color: #c0c0c0;
-    font-weight: 600;
-}
-
-textarea:focus::placeholder{
-    color: #141414;
-}
-
 .avatar {
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
 }
 
 .black-background {
-    background-color:rgb(108 97 69 / 70%);
+    background-color: rgba(165, 147, 99, 0.7);
     padding: 40px 40px 40px 40px;
 }
 
@@ -952,14 +771,11 @@ textarea:focus::placeholder{
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3834F;
+    background-color: #F3976C;
 }
 
 .tc-white {
-    color: white !important;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 10;
+    color: #F3976C!important;
 }
 
 .btn-atomic-tangerine {
@@ -994,21 +810,19 @@ textarea:focus::placeholder{
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.webp");
+    background-image: url("img/dots-bg.png");
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.webp");
+    background-image: url("img/lines-h2-bg.png");
 }
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.webp");
-    background-size: cover !important;
-    background-position: center;
+    background-image: url("img/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.webp");
+    background-image: url("img/image-de-presentation.bmp");
 }
 
 @media (max-width: 1024px) {
@@ -1148,10 +962,8 @@ textarea:focus::placeholder{
         box-shadow: none;
     }
     .navbar-brand img {
-        height: 10%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
+        max-height: 40px;
+        width: auto;
     }
     .nav-invert .navbar-header {
         float: none;
@@ -1197,9 +1009,6 @@ textarea:focus::placeholder{
     }
     .voffset-lg {
         margin-top: 30px;
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
     }
     form {
         padding: 5px;
